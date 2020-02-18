@@ -36,8 +36,6 @@ class Network {
             do {
                 
                 var object: Model?
-                var client: String!
-                var token: String!
                 
                 if let error = response.error as NSError? {
                     
@@ -47,7 +45,9 @@ class Network {
                     case -1004:
                         completion(.failure(error: "We could not connect to the server"))
                     default:
-                        completion(.failure(error: "\(String(data: response.data!, encoding: .utf8))"))
+                        if let error = String(data: response.data!, encoding: .utf8) {
+                            completion(.failure(error: error))
+                        }   
                     }
                     
                     return
@@ -66,8 +66,8 @@ class Network {
     }
     
     func appendAuthParameters(_ parameters: inout Parameters) {
-        parameters["apikey"] = "92054aba8005e42d62aed24eee96198b"
-        parameters["ts"] = "somerandomstring"
+        parameters["apikey"] = Router.pubkey
+        parameters["ts"] = Router.ts
         parameters["hash"] = MD5(Router.stringToHash(.characters)())
     }
     

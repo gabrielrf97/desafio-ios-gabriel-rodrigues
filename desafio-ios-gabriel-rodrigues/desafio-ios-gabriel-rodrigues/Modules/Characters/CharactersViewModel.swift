@@ -34,7 +34,7 @@ class CharactersViewModel {
             switch response {
             case .success(let model):
                 if let _characters = model {
-                    self.castData(characters: _characters)
+//                    self.castData(characters: _characters)
                     self.delegate?.updateView(with: self.charactersInfo)
                 }
             case .failure(let error):
@@ -43,11 +43,11 @@ class CharactersViewModel {
         })
     }
     
-    func castData(characters: [Character]) {
+    private func castData(characters: [Character]) {
         charactersInfo.removeAll()
         for char in characters {
-            let characterInfo = CharacterInfo(name: char.name, pictureUrl: char.pictureUrl, id: char.id)
-            charactersInfo.append(characterInfo)
+//            let characterInfo = CharacterInfo(name: char.name, pictureUrl: char.pictureUrl, id: char.id)
+//            charactersInfo.append(characterInfo)
         }
     }
 }

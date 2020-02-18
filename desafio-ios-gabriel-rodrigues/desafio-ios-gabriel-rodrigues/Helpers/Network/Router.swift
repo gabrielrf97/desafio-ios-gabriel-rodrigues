@@ -20,9 +20,11 @@ enum Router {
     static var version = "/v1"
     
     static let pubkey = "92054aba8005e42d62aed24eee96198b"
+    
     private var pvtkey : String {
         return "ae2000662c4b8c79870452c542c63dd907bb81a7"
     }
+    
     static let ts = "sometimestamp"
     
     static var emptyUrl: String {

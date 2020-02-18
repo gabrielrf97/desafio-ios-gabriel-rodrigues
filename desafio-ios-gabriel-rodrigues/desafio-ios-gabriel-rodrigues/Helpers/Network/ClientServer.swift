@@ -9,21 +9,21 @@
 import Foundation
 
 protocol ClientServer {
-    func requestCharacters(name: String?, completion: @escaping (NetworkResult<[Character]>) -> Void)
+    func requestCharacters(name: String?, completion: @escaping (NetworkResult<CharacterResponse>) -> Void)
     func requestCharacter(with id: Int, completion: @escaping (NetworkResult<Character>) -> Void)
     func requestComic(with id: Int, completion: @escaping (NetworkResult<Comic>) -> Void)
 }
 
 struct AppClientServer: ClientServer {
 
-    func requestCharacters(name: String?, completion: @escaping (NetworkResult<[Character]>) -> Void) {
+    func requestCharacters(name: String?, completion: @escaping (NetworkResult<CharacterResponse>) -> Void) {
         
         var params = Parameters()
         
-        if let _name = name {
-            params["name"] = _name
-        }
-        Network.shared.request(.characters, parameters: &params, model: [Character].self, completion: { response in
+//        if let _name = name {
+//            params["name"] = _name
+//        }
+        Network.shared.request(.characters, parameters: &params, model: CharacterResponse.self, completion: { response in
             switch response {
             case .success(let model):
                 completion(.success(model: model))
@@ -63,7 +63,7 @@ struct AppClientServer: ClientServer {
 }
 
 struct MockClientServer: ClientServer {
-    func requestCharacters(name: String?, completion: @escaping (NetworkResult<[Character]>) -> Void) {
+    func requestCharacters(name: String?, completion: @escaping (NetworkResult<CharacterResponse>) -> Void) {
         
     }
     

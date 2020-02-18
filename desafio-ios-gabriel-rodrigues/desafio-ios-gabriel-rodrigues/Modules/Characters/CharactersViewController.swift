@@ -21,6 +21,11 @@ class CharactersViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        charactersViewModel.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        charactersViewModel.fetchCharacters(name: "")
     }
     
     func setupView() {
@@ -51,7 +56,11 @@ extension CharactersViewController: UICollectionViewDelegate, UICollectionViewDa
 }
 
 extension CharactersViewController: UISearchBarDelegate {
-    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        if let text = searchBar.text {
+            charactersViewModel.fetchCharacters(name: text)
+        }
+    }
 }
 
 extension CharactersViewController: CharactersViewProtocol {
