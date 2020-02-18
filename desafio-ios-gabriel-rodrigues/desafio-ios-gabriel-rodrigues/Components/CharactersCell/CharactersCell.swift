@@ -12,6 +12,7 @@ class CharactersCell: UICollectionViewCell {
 
     @IBOutlet weak var characterImageView: UIImageView!
     @IBOutlet weak var characterNameLabel: UILabel!
+    var id: Int!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,4 +20,8 @@ class CharactersCell: UICollectionViewCell {
         characterImageView.layer.masksToBounds = true
     }
 
+    func configure(with info: CharacterInfo) {
+        id = info.id
+        characterNameLabel.text = info.name
+    }
 }

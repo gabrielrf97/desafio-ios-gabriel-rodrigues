@@ -12,13 +12,8 @@ import CommonCrypto
 
 typealias Parameters = [String : Any]
 
-enum NetworkLayerResult<Model> {
-    case success (model: Model?)
-    case failure (error: String)
-}
-
 enum NetworkResult<Model> {
-    case success (model: Model?, client: String, token: String)
+    case success (model: Model?)
     case failure (error: String)
 }
 
@@ -28,11 +23,11 @@ class Network {
     
     private init() {}
     
-    func request<Model:Decodable>(_ router: Router, parameters: inout Parameters?, model: Model.Type, completion: @escaping (NetworkResult<Model>) -> Void) {
+    func request<Model:Decodable>(_ router: Router, parameters: inout Parameters, model: Model.Type, completion: @escaping (NetworkResult<Model>) -> Void) {
         
         URLCache.shared.removeAllCachedResponses()
         
-        appendAuthParameters(&parameters!)
+        appendAuthParameters(&parameters)
         
         Alamofire.request(router.url, method: router.method , parameters: parameters)
             .validate()
@@ -60,13 +55,9 @@ class Network {
                 
                 if response.data?.count != 0 {
                     object = try JSONDecoder().decode(model, from: response.data!)
-                    if let headers = response.response?.allHeaderFields {
-                        client = headers["client"] as? String
-                        token = headers["access-token"] as? String
-                    }
                 }
                 
-                completion(.success(model: object, client: client, token: token))
+                completion(.success(model: object))
                 
             } catch {
                 completion(.failure(error: "Sorry, something went wrong"))
@@ -77,7 +68,7 @@ class Network {
     func appendAuthParameters(_ parameters: inout Parameters) {
         parameters["apikey"] = "92054aba8005e42d62aed24eee96198b"
         parameters["ts"] = "somerandomstring"
-        parameters["hash"] = MD5(Router.stringToHash(.login)())
+        parameters["hash"] = MD5(Router.stringToHash(.characters)())
     }
     
     func MD5(_ string: String) -> String? {

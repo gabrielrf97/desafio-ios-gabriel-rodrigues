@@ -11,8 +11,9 @@ import Alamofire
 
 enum Router {
     
-    case login
-    case getCompany
+    case characters
+    case character
+    case comic
     
     static var domain = "https://gateway.marvel.com"
     
@@ -34,15 +35,17 @@ enum Router {
     
     var path: String {
         switch self {
-        case .login: return "/users/auth/sign_in"
-        case .getCompany: return "/enterprises"
+        case .characters: return "/public/characters"
+        case .character: return "/public/characters"
+        case .comic: return "/public/comics"
         }
     }
     
     var method: HTTPMethod {
         switch self {
-            case .login: return .post
-            case .getCompany: return .get
+            case .characters: return .get
+            case .character: return .get
+            case .comic: return .get
         }
     }
     

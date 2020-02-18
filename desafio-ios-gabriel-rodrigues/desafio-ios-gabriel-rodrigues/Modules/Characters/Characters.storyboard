@@ -36,13 +36,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                 <color key="backgroundColor" red="1" green="0.028935269070422528" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <searchBar contentMode="redraw" placeholder="type the company name" translatesAutoresizingMaskIntoConstraints="NO" id="v1H-fb-Qcr">
+                            <searchBar contentMode="redraw" placeholder="type the character's name" translatesAutoresizingMaskIntoConstraints="NO" id="v1H-fb-Qcr">
                                 <rect key="frame" x="0.0" y="140" width="414" height="56"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.082152537999999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="V5w-k1-vgb"/>
                                 </constraints>
-                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="barTintColor" red="1" green="0.0" blue="0.082152537999999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <offsetWrapper key="searchTextPositionAdjustment" horizontal="4" vertical="0.0"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -62,19 +62,20 @@
                                     <size key="estimatedItemSize" width="180" height="220"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="18" minY="0.0" maxX="18" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="18" minY="18" maxX="18" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="5xD-pa-VQL">
-                                        <rect key="frame" x="18" y="0.0" width="180" height="220"/>
+                                        <rect key="frame" x="18" y="18" width="180" height="220"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Zt8-GM-Ofc">
                                             <rect key="frame" x="0.0" y="0.0" width="180" height="220"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </collectionViewCellContentView>
+                                        <size key="customSize" width="180" height="220"/>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="pIo-W5-U2M">
-                                        <rect key="frame" x="216" y="0.0" width="180" height="220"/>
+                                        <rect key="frame" x="216" y="18" width="180" height="220"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ZpM-18-8hB">
                                             <rect key="frame" x="0.0" y="0.0" width="180" height="220"/>

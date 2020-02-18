@@ -10,10 +10,16 @@
 		2E03448EB2EF3EAACDE24756 /* Pods_desafio_ios_gabriel_rodriguesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB8881A8004C7BECCCC3350D /* Pods_desafio_ios_gabriel_rodriguesTests.framework */; };
 		849BBD507F3230E1B02EE806 /* Pods_desafio_ios_gabriel_rodrigues.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85214A77E4AEE50CC25E8DA2 /* Pods_desafio_ios_gabriel_rodrigues.framework */; };
 		B1B6103DCAEC532EAE9E26F2 /* Pods_desafio_ios_gabriel_rodriguesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3008AC5890FCFAA580DE379 /* Pods_desafio_ios_gabriel_rodriguesUITests.framework */; };
+		C084BC0E23FC6229000DD813 /* ComicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C084BC0C23FC6229000DD813 /* ComicCell.swift */; };
+		C084BC0F23FC6229000DD813 /* ComicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C084BC0D23FC6229000DD813 /* ComicCell.xib */; };
+		C084BC1123FC6598000DD813 /* ComicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C084BC1023FC6598000DD813 /* ComicViewController.swift */; };
+		C084BC1323FC65A6000DD813 /* Comic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C084BC1223FC65A6000DD813 /* Comic.storyboard */; };
+		C084BC1523FC65B3000DD813 /* ComicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C084BC1423FC65B3000DD813 /* ComicViewModel.swift */; };
+		C084BC1823FC6856000DD813 /* PriceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C084BC1723FC6856000DD813 /* PriceCell.xib */; };
+		C084BC1A23FC686C000DD813 /* PriceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C084BC1923FC686C000DD813 /* PriceCell.swift */; };
+		C084BC1E23FC849A000DD813 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C084BC1D23FC849A000DD813 /* UIViewControllerExt.swift */; };
 		C0FE08F723FB30B600D9024D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FE08F623FB30B600D9024D /* AppDelegate.swift */; };
 		C0FE08F923FB30B600D9024D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FE08F823FB30B600D9024D /* SceneDelegate.swift */; };
-		C0FE08FB23FB30B600D9024D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FE08FA23FB30B600D9024D /* ViewController.swift */; };
-		C0FE08FE23FB30B600D9024D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0FE08FC23FB30B600D9024D /* Main.storyboard */; };
 		C0FE090023FB30BA00D9024D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0FE08FF23FB30BA00D9024D /* Assets.xcassets */; };
 		C0FE090323FB30BA00D9024D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0FE090123FB30BA00D9024D /* LaunchScreen.storyboard */; };
 		C0FE090E23FB30BA00D9024D /* desafio_ios_gabriel_rodriguesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FE090D23FB30BA00D9024D /* desafio_ios_gabriel_rodriguesTests.swift */; };
@@ -29,6 +35,9 @@
 		C0FE094B23FC511B00D9024D /* CharactersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FE094A23FC511B00D9024D /* CharactersCell.swift */; };
 		C0FE094D23FC514500D9024D /* CharactersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0FE094C23FC514500D9024D /* CharactersCell.xib */; };
 		C0FE094F23FC5A2500D9024D /* ClientServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FE094E23FC5A2500D9024D /* ClientServer.swift */; };
+		C0FE095123FC5D7D00D9024D /* SingleCharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FE095023FC5D7D00D9024D /* SingleCharacterViewController.swift */; };
+		C0FE095323FC5D8800D9024D /* SingleCharacter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0FE095223FC5D8800D9024D /* SingleCharacter.storyboard */; };
+		C0FE095523FC5D9700D9024D /* SingleCharacterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FE095423FC5D9700D9024D /* SingleCharacterViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,11 +66,17 @@
 		90745ED5B2B594DCF78AF755 /* Pods-desafio-ios-gabriel-rodriguesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafio-ios-gabriel-rodriguesTests.debug.xcconfig"; path = "Target Support Files/Pods-desafio-ios-gabriel-rodriguesTests/Pods-desafio-ios-gabriel-rodriguesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A3008AC5890FCFAA580DE379 /* Pods_desafio_ios_gabriel_rodriguesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_desafio_ios_gabriel_rodriguesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB8881A8004C7BECCCC3350D /* Pods_desafio_ios_gabriel_rodriguesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_desafio_ios_gabriel_rodriguesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C084BC0C23FC6229000DD813 /* ComicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicCell.swift; sourceTree = "<group>"; };
+		C084BC0D23FC6229000DD813 /* ComicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComicCell.xib; sourceTree = "<group>"; };
+		C084BC1023FC6598000DD813 /* ComicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicViewController.swift; sourceTree = "<group>"; };
+		C084BC1223FC65A6000DD813 /* Comic.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Comic.storyboard; sourceTree = "<group>"; };
+		C084BC1423FC65B3000DD813 /* ComicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicViewModel.swift; sourceTree = "<group>"; };
+		C084BC1723FC6856000DD813 /* PriceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PriceCell.xib; sourceTree = "<group>"; };
+		C084BC1923FC686C000DD813 /* PriceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceCell.swift; sourceTree = "<group>"; };
+		C084BC1D23FC849A000DD813 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		C0FE08F323FB30B600D9024D /* desafio-ios-gabriel-rodrigues.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "desafio-ios-gabriel-rodrigues.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0FE08F623FB30B600D9024D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0FE08F823FB30B600D9024D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C0FE08FA23FB30B600D9024D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C0FE08FD23FB30B600D9024D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C0FE08FF23FB30BA00D9024D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C0FE090223FB30BA00D9024D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C0FE090423FB30BA00D9024D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -82,6 +97,9 @@
 		C0FE094A23FC511B00D9024D /* CharactersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersCell.swift; sourceTree = "<group>"; };
 		C0FE094C23FC514500D9024D /* CharactersCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharactersCell.xib; sourceTree = "<group>"; };
 		C0FE094E23FC5A2500D9024D /* ClientServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientServer.swift; sourceTree = "<group>"; };
+		C0FE095023FC5D7D00D9024D /* SingleCharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCharacterViewController.swift; sourceTree = "<group>"; };
+		C0FE095223FC5D8800D9024D /* SingleCharacter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SingleCharacter.storyboard; sourceTree = "<group>"; };
+		C0FE095423FC5D9700D9024D /* SingleCharacterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCharacterViewModel.swift; sourceTree = "<group>"; };
 		F27E522D5DFF54D1B24DB028 /* Pods-desafio-ios-gabriel-rodriguesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafio-ios-gabriel-rodriguesTests.release.xcconfig"; path = "Target Support Files/Pods-desafio-ios-gabriel-rodriguesTests/Pods-desafio-ios-gabriel-rodriguesTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,6 +141,50 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C084BC0A23FC6200000DD813 /* CharactersCell */ = {
+			isa = PBXGroup;
+			children = (
+				C0FE094A23FC511B00D9024D /* CharactersCell.swift */,
+				C0FE094C23FC514500D9024D /* CharactersCell.xib */,
+			);
+			path = CharactersCell;
+			sourceTree = "<group>";
+		};
+		C084BC0B23FC620A000DD813 /* ComicCell */ = {
+			isa = PBXGroup;
+			children = (
+				C084BC0C23FC6229000DD813 /* ComicCell.swift */,
+				C084BC0D23FC6229000DD813 /* ComicCell.xib */,
+			);
+			path = ComicCell;
+			sourceTree = "<group>";
+		};
+		C084BC1623FC6846000DD813 /* PriceCell */ = {
+			isa = PBXGroup;
+			children = (
+				C084BC1723FC6856000DD813 /* PriceCell.xib */,
+				C084BC1923FC686C000DD813 /* PriceCell.swift */,
+			);
+			path = PriceCell;
+			sourceTree = "<group>";
+		};
+		C084BC1B23FC847A000DD813 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C084BC1C23FC8489000DD813 /* Extension */,
+				C0FE092623FB30C400D9024D /* Network */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C084BC1C23FC8489000DD813 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C084BC1D23FC849A000DD813 /* UIViewControllerExt.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		C0FE08EA23FB30B600D9024D = {
 			isa = PBXGroup;
 			children = (
@@ -148,13 +210,11 @@
 		C0FE08F523FB30B600D9024D /* desafio-ios-gabriel-rodrigues */ = {
 			isa = PBXGroup;
 			children = (
+				C084BC1B23FC847A000DD813 /* Helpers */,
 				C0FE094923FC50FA00D9024D /* Components */,
 				C0FE093F23FC4B3600D9024D /* Modules */,
 				C0FE093023FB35C100D9024D /* AppAuth */,
 				C0FE092B23FB32D500D9024D /* Models */,
-				C0FE092623FB30C400D9024D /* Network */,
-				C0FE08FA23FB30B600D9024D /* ViewController.swift */,
-				C0FE08FC23FB30B600D9024D /* Main.storyboard */,
 				C0FE08FF23FB30BA00D9024D /* Assets.xcassets */,
 				C0FE090123FB30BA00D9024D /* LaunchScreen.storyboard */,
 				C0FE090423FB30BA00D9024D /* Info.plist */,
@@ -232,6 +292,9 @@
 		C0FE094723FC4D4700D9024D /* SingleCharacter */ = {
 			isa = PBXGroup;
 			children = (
+				C0FE095023FC5D7D00D9024D /* SingleCharacterViewController.swift */,
+				C0FE095223FC5D8800D9024D /* SingleCharacter.storyboard */,
+				C0FE095423FC5D9700D9024D /* SingleCharacterViewModel.swift */,
 			);
 			path = SingleCharacter;
 			sourceTree = "<group>";
@@ -239,6 +302,9 @@
 		C0FE094823FC4D5100D9024D /* Comic */ = {
 			isa = PBXGroup;
 			children = (
+				C084BC1023FC6598000DD813 /* ComicViewController.swift */,
+				C084BC1223FC65A6000DD813 /* Comic.storyboard */,
+				C084BC1423FC65B3000DD813 /* ComicViewModel.swift */,
 			);
 			path = Comic;
 			sourceTree = "<group>";
@@ -246,8 +312,9 @@
 		C0FE094923FC50FA00D9024D /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				C0FE094A23FC511B00D9024D /* CharactersCell.swift */,
-				C0FE094C23FC514500D9024D /* CharactersCell.xib */,
+				C084BC1623FC6846000DD813 /* PriceCell */,
+				C084BC0B23FC620A000DD813 /* ComicCell */,
+				C084BC0A23FC6200000DD813 /* CharactersCell */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -373,11 +440,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C084BC1323FC65A6000DD813 /* Comic.storyboard in Resources */,
+				C084BC1823FC6856000DD813 /* PriceCell.xib in Resources */,
 				C0FE094523FC4C1E00D9024D /* Characters.storyboard in Resources */,
+				C084BC0F23FC6229000DD813 /* ComicCell.xib in Resources */,
+				C0FE095323FC5D8800D9024D /* SingleCharacter.storyboard in Resources */,
 				C0FE090323FB30BA00D9024D /* LaunchScreen.storyboard in Resources */,
 				C0FE094D23FC514500D9024D /* CharactersCell.xib in Resources */,
 				C0FE090023FB30BA00D9024D /* Assets.xcassets in Resources */,
-				C0FE08FE23FB30B600D9024D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,18 +558,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0FE095523FC5D9700D9024D /* SingleCharacterViewModel.swift in Sources */,
+				C0FE095123FC5D7D00D9024D /* SingleCharacterViewController.swift in Sources */,
+				C084BC1E23FC849A000DD813 /* UIViewControllerExt.swift in Sources */,
+				C084BC1123FC6598000DD813 /* ComicViewController.swift in Sources */,
 				C0FE092A23FB30F300D9024D /* Network.swift in Sources */,
 				C0FE092923FB30F300D9024D /* Router.swift in Sources */,
 				C0FE092F23FB33E200D9024D /* Comic.swift in Sources */,
+				C084BC1523FC65B3000DD813 /* ComicViewModel.swift in Sources */,
+				C084BC1A23FC686C000DD813 /* PriceCell.swift in Sources */,
 				C0FE093223FB35E400D9024D /* AppAuth.swift in Sources */,
 				C0FE094323FC4C1100D9024D /* CharactersViewModel.swift in Sources */,
-				C0FE08FB23FB30B600D9024D /* ViewController.swift in Sources */,
 				C0FE094B23FC511B00D9024D /* CharactersCell.swift in Sources */,
 				C0FE094F23FC5A2500D9024D /* ClientServer.swift in Sources */,
 				C0FE092D23FB32E300D9024D /* Character.swift in Sources */,
 				C0FE08F723FB30B600D9024D /* AppDelegate.swift in Sources */,
 				C0FE08F923FB30B600D9024D /* SceneDelegate.swift in Sources */,
 				C0FE094123FC4B4900D9024D /* CharactersViewController.swift in Sources */,
+				C084BC0E23FC6229000DD813 /* ComicCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,14 +611,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C0FE08FC23FB30B600D9024D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C0FE08FD23FB30B600D9024D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C0FE090123FB30BA00D9024D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

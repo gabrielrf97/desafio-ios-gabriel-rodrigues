@@ -16,7 +16,7 @@ class CharactersViewController: UIViewController {
     
     let charactersViewModel = CharactersViewModel()
     var cellIdentifier = "CharactersCell"
-//    var companies = [CharactersInfo]()
+    var charactersInfo = [CharacterInfo]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,17 +30,39 @@ class CharactersViewController: UIViewController {
 
 extension CharactersViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return charactersInfo.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as? CharactersCell  else {
             return UICollectionViewCell()
         }
+        cell.configure(with: charactersInfo[indexPath.row])
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let characterVC = UIStoryboard(name: "SingleCharacter", bundle: nil).instantiateInitialViewController() as? SingleCharacterViewController else {
+            return
+        }
+        characterVC.modalPresentationStyle = .fullScreen
+        self.present(characterVC, animated: true, completion: nil)
     }
 }
 
 extension CharactersViewController: UISearchBarDelegate {
     
+}
+
+extension CharactersViewController: CharactersViewProtocol {
+    func updateView(with charactersInfo: [CharacterInfo]) {
+        self.charactersInfo = charactersInfo
+        DispatchQueue.main.async {
+            self.charactersCollectionView.reloadData()
+        }
+    }
+    
+    func show(error: String) {
+        self.presentMessage(with: "Ops", body: error, option: "Tente novamente")
+    }
 }
