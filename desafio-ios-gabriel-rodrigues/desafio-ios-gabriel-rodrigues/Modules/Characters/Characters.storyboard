@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uhE-cR-aHO">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15508"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Characters View Controller-->
+        <scene sceneID="1Vb-aG-Pcb">
+            <objects>
+                <viewController id="uhE-cR-aHO" customClass="CharactersViewController" customModule="desafio_ios_gabriel_rodrigues" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GUk-mh-4BW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b7Q-Cm-aV8">
+                                <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.1469739377" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="96" id="4qH-cN-lxL"/>
+                                </constraints>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <textAttributes key="largeTitleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="MARVEL Heroes" id="HWu-ll-X91"/>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5rU-oM-TQN">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <color key="backgroundColor" red="1" green="0.028935269070422528" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <searchBar contentMode="redraw" placeholder="type the company name" translatesAutoresizingMaskIntoConstraints="NO" id="v1H-fb-Qcr">
+                                <rect key="frame" x="0.0" y="140" width="414" height="56"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.082152537999999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="V5w-k1-vgb"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" red="1" green="0.0" blue="0.082152537999999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <offsetWrapper key="searchTextPositionAdjustment" horizontal="4" vertical="0.0"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                                <connections>
+                                    <outlet property="delegate" destination="uhE-cR-aHO" id="4zh-xB-bjy"/>
+                                </connections>
+                            </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OJE-IP-toy">
+                                <rect key="frame" x="0.0" y="196" width="414" height="700"/>
+                                <color key="backgroundColor" red="0.1529197991" green="0.15295344590000001" blue="0.15291768310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bxz-C1-65E">
+                                    <size key="itemSize" width="180" height="220"/>
+                                    <size key="estimatedItemSize" width="180" height="220"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="18" minY="0.0" maxX="18" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="5xD-pa-VQL">
+                                        <rect key="frame" x="18" y="0.0" width="180" height="220"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Zt8-GM-Ofc">
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="220"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="pIo-W5-U2M">
+                                        <rect key="frame" x="216" y="0.0" width="180" height="220"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ZpM-18-8hB">
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="220"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="uhE-cR-aHO" id="cWF-dE-YKt"/>
+                                    <outlet property="delegate" destination="uhE-cR-aHO" id="xiG-SF-Ydc"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="b7Q-Cm-aV8" firstAttribute="top" secondItem="5rU-oM-TQN" secondAttribute="bottom" id="137-im-JG7"/>
+                            <constraint firstItem="v1H-fb-Qcr" firstAttribute="leading" secondItem="an8-jk-r9P" secondAttribute="leading" id="5VC-it-rjD"/>
+                            <constraint firstItem="5rU-oM-TQN" firstAttribute="leading" secondItem="GUk-mh-4BW" secondAttribute="leading" id="Bib-kH-v41"/>
+                            <constraint firstItem="an8-jk-r9P" firstAttribute="trailing" secondItem="OJE-IP-toy" secondAttribute="trailing" id="QbW-8m-mkl"/>
+                            <constraint firstItem="an8-jk-r9P" firstAttribute="bottom" secondItem="OJE-IP-toy" secondAttribute="bottom" constant="-34" id="Umv-dT-2x1"/>
+                            <constraint firstItem="b7Q-Cm-aV8" firstAttribute="top" secondItem="an8-jk-r9P" secondAttribute="top" id="ZrP-gh-faC"/>
+                            <constraint firstItem="OJE-IP-toy" firstAttribute="leading" secondItem="an8-jk-r9P" secondAttribute="leading" id="bdi-0Z-A2D"/>
+                            <constraint firstItem="b7Q-Cm-aV8" firstAttribute="leading" secondItem="an8-jk-r9P" secondAttribute="leading" id="c63-d6-Huc"/>
+                            <constraint firstItem="b7Q-Cm-aV8" firstAttribute="trailing" secondItem="an8-jk-r9P" secondAttribute="trailing" id="gzf-Di-IUv"/>
+                            <constraint firstItem="v1H-fb-Qcr" firstAttribute="trailing" secondItem="an8-jk-r9P" secondAttribute="trailing" id="lbo-Ge-Ns0"/>
+                            <constraint firstItem="v1H-fb-Qcr" firstAttribute="top" secondItem="b7Q-Cm-aV8" secondAttribute="bottom" id="pkL-Ok-ZPS"/>
+                            <constraint firstAttribute="trailing" secondItem="5rU-oM-TQN" secondAttribute="trailing" id="qs7-kQ-S8h"/>
+                            <constraint firstItem="OJE-IP-toy" firstAttribute="top" secondItem="v1H-fb-Qcr" secondAttribute="bottom" id="rZs-kz-m4b"/>
+                            <constraint firstItem="5rU-oM-TQN" firstAttribute="top" secondItem="GUk-mh-4BW" secondAttribute="top" id="zYO-pP-PA3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="an8-jk-r9P"/>
+                    </view>
+                    <connections>
+                        <outlet property="charactersCollectionView" destination="OJE-IP-toy" id="bUp-yI-heT"/>
+                        <outlet property="navBar" destination="b7Q-Cm-aV8" id="YHA-g0-OJW"/>
+                        <outlet property="searchBar" destination="v1H-fb-Qcr" id="LsC-bN-qdU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0mI-Pv-dSJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="77.678571428571431"/>
+        </scene>
+    </scenes>
+</document>
