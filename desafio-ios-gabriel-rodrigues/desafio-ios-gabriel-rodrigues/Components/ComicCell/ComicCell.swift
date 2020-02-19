@@ -11,6 +11,7 @@ import UIKit
 class ComicCell: UICollectionViewCell {
 
     @IBOutlet weak var comicImage: UIImageView!
+    var id: Int!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -18,4 +19,13 @@ class ComicCell: UICollectionViewCell {
         comicImage.layer.masksToBounds = true
     }
 
+    func configure(with info: CharacterInfo) {
+        id = info.id
+        comicImage.hero.id = info.name
+//        characterNameLabel.text = info.name
+        guard let pictureURL = info.pictureUrl, let url = URL(string: pictureURL) else {
+            return
+        }
+//        characterImageView!.sd_setImage(with: url)
+    }
 }

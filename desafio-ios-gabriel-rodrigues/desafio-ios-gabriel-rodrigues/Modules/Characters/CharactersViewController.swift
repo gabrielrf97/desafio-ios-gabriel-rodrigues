@@ -22,6 +22,7 @@ class CharactersViewController: UIViewController {
         super.viewDidLoad()
         setupView()
         charactersViewModel.delegate = self
+        self.hero.isEnabled = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -50,7 +51,10 @@ extension CharactersViewController: UICollectionViewDelegate, UICollectionViewDa
         guard let characterVC = UIStoryboard(name: "SingleCharacter", bundle: nil).instantiateInitialViewController() as? SingleCharacterViewController else {
             return
         }
+        characterVC.character = charactersViewModel.characters[indexPath.row]
         characterVC.modalPresentationStyle = .fullScreen
+        characterVC.hero.isEnabled = true
+        characterVC.hero.modalAnimationType = .autoReverse(presenting: .fade)
         self.present(characterVC, animated: true, completion: nil)
     }
 }

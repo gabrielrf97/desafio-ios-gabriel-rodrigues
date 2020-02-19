@@ -18,9 +18,12 @@ class ComicViewController: UIViewController {
     
     let cellIdentifier = "PriceCell"
     
+    var heroId: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        comicImageView.hero.id = heroId
     }
     
     @IBAction func backTapped(_ sender: Any) {

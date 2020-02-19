@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class CharactersCell: UICollectionViewCell {
 
@@ -22,6 +23,11 @@ class CharactersCell: UICollectionViewCell {
 
     func configure(with info: CharacterInfo) {
         id = info.id
+        characterImageView.hero.id = info.name
         characterNameLabel.text = info.name
+        guard let pictureURL = info.pictureUrl, let url = URL(string: pictureURL) else {
+            return
+        }
+//        characterImageView!.sd_setImage(with: url)
     }
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Hero
 
 class SingleCharacterViewController: UIViewController {
 
@@ -17,13 +18,29 @@ class SingleCharacterViewController: UIViewController {
     @IBOutlet weak var comicsCollectionView: UICollectionView!
     let comicIdentifier = "ComicCell"
     
+    var character: Character! //Not a good pattern in MVVM, but creating a struct would be model duplication
+    let viewModel = SingleCharacterViewModel()
+    var comics = [Comic]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        comicsCollectionView.register(UINib(nibName: comicIdentifier, bundle: nil), forCellWithReuseIdentifier: comicIdentifier)
+        setupView()
+        self.hero.isEnabled = true
     }
     
     @IBAction func backTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    func setupView() {
+        comicsCollectionView.register(UINib(nibName: comicIdentifier, bundle: nil), forCellWithReuseIdentifier: comicIdentifier)
+        guard let _character = character else {
+            return
+        }
+        characterImageView.hero.id = _character.name
+//        characterImageView!.sd_setImage(with: URL(string: _character.pictureUrl!), completed: nil)
+        characterName.text = _character.name
+        characterDescription.text = _character.description
     }
 }
 
@@ -36,6 +53,8 @@ extension SingleCharacterViewController: UICollectionViewDelegate, UICollectionV
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: comicIdentifier, for: indexPath) as? ComicCell else {
             return UICollectionViewCell()
         }
+//        cell.configure(with: Com)
+        cell.comicImage.hero.id = "\(indexPath.row)"
         return cell
     }
     
@@ -43,7 +62,10 @@ extension SingleCharacterViewController: UICollectionViewDelegate, UICollectionV
         guard let comicVC = UIStoryboard(name: "Comic", bundle: nil).instantiateInitialViewController() as? ComicViewController else {
             return
         }
-        comicVC.modalPresentationStyle = .fullScreen
+        comicVC.hero.isEnabled = true
+        comicVC.hero.modalAnimationType = .autoReverse(presenting: .zoom)
+        comicVC.heroId = "\(indexPath.row)"
+//        comicVC.modalPresentationStyle = .fullScreen
         self.present(comicVC, animated: true, completion: nil)
     }
 }

@@ -23,6 +23,7 @@ class CharactersViewModel {
     
     let server: ClientServer
     weak var delegate: CharactersViewProtocol?
+    var characters = [Character]()
     var charactersInfo = [CharacterInfo]()
     
     init(server: ClientServer = AppClientServer()) {
@@ -33,8 +34,9 @@ class CharactersViewModel {
         server.requestCharacters(name: name, completion: { response in
             switch response {
             case .success(let model):
-                if let _characters = model {
-//                    self.castData(characters: _characters)
+                if let _characters = model?.data.results {
+                    self.setCharacters(characters: _characters)
+                    self.castData(characters: _characters)
                     self.delegate?.updateView(with: self.charactersInfo)
                 }
             case .failure(let error):
@@ -46,8 +48,13 @@ class CharactersViewModel {
     private func castData(characters: [Character]) {
         charactersInfo.removeAll()
         for char in characters {
-//            let characterInfo = CharacterInfo(name: char.name, pictureUrl: char.pictureUrl, id: char.id)
-//            charactersInfo.append(characterInfo)
+            let characterInfo = CharacterInfo(name: char.name, pictureUrl: char.pictureUrl, id: char.id)
+            charactersInfo.append(characterInfo)
         }
+    }
+    
+    private func setCharacters(characters: [Character]) {
+        self.characters.removeAll()
+        self.characters = characters
     }
 }
