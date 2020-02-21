@@ -15,6 +15,8 @@ enum Router {
     case character
     case comic
     
+    static var currentId: Int = 0
+    
     static var domain = "https://gateway.marvel.com"
     
     static var version = "/v1"
@@ -39,7 +41,7 @@ enum Router {
         switch self {
         case .characters: return "/public/characters"
         case .character: return "/public/characters"
-        case .comic: return "/public/comics"
+        case .comic: return "/public/comics/\(Router.currentId)"
         }
     }
     

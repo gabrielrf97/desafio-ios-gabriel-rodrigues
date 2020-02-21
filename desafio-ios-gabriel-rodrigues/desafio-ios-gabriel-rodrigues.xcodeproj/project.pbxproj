@@ -213,7 +213,7 @@
 				C084BC1B23FC847A000DD813 /* Helpers */,
 				C0FE094923FC50FA00D9024D /* Components */,
 				C0FE093F23FC4B3600D9024D /* Modules */,
-				C0FE093023FB35C100D9024D /* AppAuth */,
+				C0FE093023FB35C100D9024D /* App */,
 				C0FE092B23FB32D500D9024D /* Models */,
 				C0FE08FF23FB30BA00D9024D /* Assets.xcassets */,
 				C0FE090123FB30BA00D9024D /* LaunchScreen.storyboard */,
@@ -259,14 +259,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		C0FE093023FB35C100D9024D /* AppAuth */ = {
+		C0FE093023FB35C100D9024D /* App */ = {
 			isa = PBXGroup;
 			children = (
 				C0FE093123FB35E400D9024D /* AppAuth.swift */,
 				C0FE08F623FB30B600D9024D /* AppDelegate.swift */,
 				C0FE08F823FB30B600D9024D /* SceneDelegate.swift */,
 			);
-			path = AppAuth;
+			path = App;
 			sourceTree = "<group>";
 		};
 		C0FE093F23FC4B3600D9024D /* Modules */ = {

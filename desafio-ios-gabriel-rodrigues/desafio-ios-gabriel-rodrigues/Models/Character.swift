@@ -31,7 +31,7 @@ class Character: Decodable {
         let pictureContainer = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .pictureGroup)
         let picExtension = try pictureContainer.decode(String.self, forKey: .pictureExtension)
         let picPath = try pictureContainer.decode(String.self, forKey: .pictureUrl)
-        pictureUrl = "\(picExtension).\(picPath)"
+        pictureUrl = "\(picPath).\(picExtension)"
         let comicsContainer = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .outterComics)
         comics = try comicsContainer.decode([ComicShort].self, forKey: .comics)
     }

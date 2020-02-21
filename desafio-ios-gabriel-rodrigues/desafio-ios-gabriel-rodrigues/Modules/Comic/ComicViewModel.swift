@@ -8,6 +8,31 @@
 
 import Foundation
 
+extension UpdateViewProtocol {
+    func updateView(with comicInfo: Comic) {}
+}
+
 class ComicViewModel {
+    
+    weak var viewDelegate: UpdateViewProtocol?
+    let server: ClientServer
+    var id: Int!
+    
+    init(server: ClientServer = AppClientServer()) {
+        self.server = server
+    }
+    
+    func fetchComic(with id: Int) {
+        server.requestComic(with: id, completion: { response in
+            switch response {
+            case .success(let model):
+                if let comics = model {
+                    self.viewDelegate?.updateView(with: comics.data.results.first!)
+                }
+            case .failure(let error):
+                self.viewDelegate?.show(error: error)
+            }
+        })
+    }
     
 }

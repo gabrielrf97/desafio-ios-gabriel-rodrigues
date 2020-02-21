@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "204457F8-23C8-4088-8DA1-0C1BDBB3583B"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BE8DFA8D-A845-4148-A379-B3389582F9C7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "desafio-ios-gabriel-rodrigues/Helpers/Network/Network.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "request(_:parameters:model:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CEDE4BBE-539F-46CB-975A-DF2153B72324"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "desafio-ios-gabriel-rodrigues/Helpers/Network/Network.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "request(_:parameters:model:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8DD2F6DE-5DA5-4522-8857-59E6638AD9D6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "desafio-ios-gabriel-rodrigues/Modules/Comic/ComicViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "updateView(with:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8DD2F6DE-5DA5-4522-8857-59E6638AD9D6 - dedb0c0f9c310a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "desafio_ios_gabriel_rodrigues.ComicViewController.updateView(with: desafio_ios_gabriel_rodrigues.Comic) -&gt; ()"
+                  moduleName = "desafio-ios-gabriel-rodrigues"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gabriel/Desktop/Personal%20Apps/desafio-ios-gabriel-rodrigues/desafio-ios-gabriel-rodrigues/desafio-ios-gabriel-rodrigues/Modules/Comic/ComicViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "176">
+               </Location>
+               <Location
+                  uuid = "8DD2F6DE-5DA5-4522-8857-59E6638AD9D6 - 69883e2cc4a045e4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in desafio_ios_gabriel_rodrigues.ComicViewController.updateView(with: desafio_ios_gabriel_rodrigues.Comic) -&gt; ()"
+                  moduleName = "desafio-ios-gabriel-rodrigues"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gabriel/Desktop/Personal%20Apps/desafio-ios-gabriel-rodrigues/desafio-ios-gabriel-rodrigues/desafio-ios-gabriel-rodrigues/Modules/Comic/ComicViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "144">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7C7AE95B-66F1-48E2-99A3-EBBFBDDB1E9F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "desafio-ios-gabriel-rodrigues/Modules/SingleCharacter/SingleCharacterViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "updateView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "11DD534A-803E-4D1A-9D60-1DF65612492D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "desafio-ios-gabriel-rodrigues/Modules/Comic/ComicViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "fetchComic(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C6963363-73C1-498A-920E-E8E0E1E78837"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "desafio-ios-gabriel-rodrigues/Modules/Comic/ComicViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "fetchComic(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2A34195C-D28A-4A50-B4A7-3B46CFF7A878"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "desafio-ios-gabriel-rodrigues/Modules/Comic/ComicViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "fetchComic(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "45108400-5038-4F1A-B5B9-7102B13B786A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "desafio-ios-gabriel-rodrigues/Modules/Comic/ComicViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "fetchComic(with:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "45108400-5038-4F1A-B5B9-7102B13B786A - 2986899d72950f97"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (desafio_ios_gabriel_rodrigues.NetworkResult&lt;desafio_ios_gabriel_rodrigues.ComicRespose&gt;) -&gt; () in desafio_ios_gabriel_rodrigues.ComicViewModel.fetchComic(with: Swift.Int) -&gt; ()"
+                  moduleName = "desafio-ios-gabriel-rodrigues"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gabriel/Desktop/Personal%20Apps/desafio-ios-gabriel-rodrigues/desafio-ios-gabriel-rodrigues/desafio-ios-gabriel-rodrigues/Modules/Comic/ComicViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "238">
+               </Location>
+               <Location
+                  uuid = "45108400-5038-4F1A-B5B9-7102B13B786A - 2986899d72950f97"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (desafio_ios_gabriel_rodrigues.NetworkResult&lt;desafio_ios_gabriel_rodrigues.ComicRespose&gt;) -&gt; () in desafio_ios_gabriel_rodrigues.ComicViewModel.fetchComic(with: Swift.Int) -&gt; ()"
+                  moduleName = "desafio-ios-gabriel-rodrigues"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gabriel/Desktop/Personal%20Apps/desafio-ios-gabriel-rodrigues/desafio-ios-gabriel-rodrigues/desafio-ios-gabriel-rodrigues/Modules/Comic/ComicViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "277">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3DEBE00C-123A-4750-B4F9-4CBBBD257B21"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "desafio-ios-gabriel-rodrigues/Modules/SingleCharacter/SingleCharacterViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "fetch(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

@@ -26,7 +26,7 @@ class CharactersViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        charactersViewModel.fetchCharacters(name: "")
+        charactersViewModel.fetchCharacters(name: searchBar.text ?? "")
     }
     
     func setupView() {
@@ -65,14 +65,16 @@ extension CharactersViewController: UISearchBarDelegate {
             charactersViewModel.fetchCharacters(name: text)
         }
     }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+         charactersViewModel.fetchCharacters(name: searchText)
+    }
 }
 
-extension CharactersViewController: CharactersViewProtocol {
+extension CharactersViewController: ViewProtocol {
     func updateView(with charactersInfo: [CharacterInfo]) {
         self.charactersInfo = charactersInfo
-        DispatchQueue.main.async {
-            self.charactersCollectionView.reloadData()
-        }
+        self.charactersCollectionView.reloadData()
     }
     
     func show(error: String) {

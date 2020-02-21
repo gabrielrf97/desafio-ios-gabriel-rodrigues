@@ -21,7 +21,9 @@ class Network {
     
     static let shared = Network()
     
-    private init() {}
+    private init() {
+        bypassAuthentication()
+    }
     
     func request<Model:Decodable>(_ router: Router, parameters: inout Parameters, model: Model.Type, completion: @escaping (NetworkResult<Model>) -> Void) {
         
@@ -65,13 +67,13 @@ class Network {
         }
     }
     
-    func appendAuthParameters(_ parameters: inout Parameters) {
+    private func appendAuthParameters(_ parameters: inout Parameters) {
         parameters["apikey"] = Router.pubkey
         parameters["ts"] = Router.ts
         parameters["hash"] = MD5(Router.stringToHash(.characters)())
     }
     
-    func MD5(_ string: String) -> String? {
+    private func MD5(_ string: String) -> String? {
         let length = Int(CC_MD5_DIGEST_LENGTH)
         var digest = [UInt8](repeating: 0, count: length)
 
@@ -83,6 +85,28 @@ class Network {
 
         return (0..<length).reduce("") {
             $0 + String(format: "%02x", digest[$1])
+        }
+    }
+    
+    private func bypassAuthentication() {
+        let manager = Alamofire.SessionManager.default
+        manager.delegate.sessionDidReceiveChallenge = { session, challenge in
+            var disposition: URLSession.AuthChallengeDisposition = .performDefaultHandling
+            var credential: URLCredential?
+            if challenge.protectionSpace.authenticationMethod == NSURLAuthenticationMethodServerTrust {
+                disposition = URLSession.AuthChallengeDisposition.useCredential
+                credential = URLCredential(trust: challenge.protectionSpace.serverTrust!)
+            } else {
+                if challenge.previousFailureCount > 0 {
+                    disposition = .cancelAuthenticationChallenge
+                } else {
+                    credential = manager.session.configuration.urlCredentialStorage?.defaultCredential(for: challenge.protectionSpace)
+                    if credential != nil {
+                        disposition = .useCredential
+                    }
+                }
+            }
+            return (disposition, credential)
         }
     }
 }

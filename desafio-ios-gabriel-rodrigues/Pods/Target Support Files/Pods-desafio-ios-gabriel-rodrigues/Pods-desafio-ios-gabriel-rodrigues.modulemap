@@ -1,0 +1,6 @@
+framework module Pods_desafio_ios_gabriel_rodrigues {
+  umbrella header "Pods-desafio-ios-gabriel-rodrigues-umbrella.h"
+
+  export *
+  module * { export * }
+}

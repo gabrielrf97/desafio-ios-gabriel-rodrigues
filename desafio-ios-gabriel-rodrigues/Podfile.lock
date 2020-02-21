@@ -1,0 +1,25 @@
+PODS:
+  - Alamofire (4.8.2)
+  - AlamofireImage (3.5.2):
+    - Alamofire (~> 4.8)
+  - Hero (1.4.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - AlamofireImage
+  - Hero
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlamofireImage
+    - Hero
+
+SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  AlamofireImage: 63cfe3baf1370be6c498149687cf6db3e3b00999
+  Hero: bac92350d7201a1a940003e0767c7b52ce7c99a1
+
+PODFILE CHECKSUM: 502a8d7d3c1ccc777b13ba44504986708a954446
+
+COCOAPODS: 1.7.5

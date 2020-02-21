@@ -5,7 +5,7 @@ target 'desafio-ios-gabriel-rodrigues' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
   pod 'Alamofire'
-  pod 'SDWebImage'
+  pod 'AlamofireImage'
   pod "Hero"
   # Pods for desafio-ios-gabriel-rodrigues
 

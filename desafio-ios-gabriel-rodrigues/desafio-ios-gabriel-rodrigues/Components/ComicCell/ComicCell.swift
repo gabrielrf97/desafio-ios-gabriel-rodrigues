@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class ComicCell: UICollectionViewCell {
 
@@ -19,13 +20,9 @@ class ComicCell: UICollectionViewCell {
         comicImage.layer.masksToBounds = true
     }
 
-    func configure(with info: CharacterInfo) {
+    func configure(with info: Comic) {
         id = info.id
-        comicImage.hero.id = info.name
-//        characterNameLabel.text = info.name
-        guard let pictureURL = info.pictureUrl, let url = URL(string: pictureURL) else {
-            return
-        }
-//        characterImageView!.sd_setImage(with: url)
+        comicImage.hero.id = "\(info.id)"
+        comicImage.af_setImage(withURL: URL(string: info.pictureUrl!)!)
     }
 }

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SDWebImage
+import AlamofireImage
 
 class CharactersCell: UICollectionViewCell {
 
@@ -21,13 +21,17 @@ class CharactersCell: UICollectionViewCell {
         characterImageView.layer.masksToBounds = true
     }
 
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        id = 0
+        characterImageView.image = UIImage()
+        characterNameLabel.text = ""
+    }
+    
     func configure(with info: CharacterInfo) {
         id = info.id
         characterImageView.hero.id = info.name
         characterNameLabel.text = info.name
-        guard let pictureURL = info.pictureUrl, let url = URL(string: pictureURL) else {
-            return
-        }
-//        characterImageView!.sd_setImage(with: url)
+        characterImageView.af_setImage(withURL: URL(string: info.pictureUrl!)!)
     }
 }

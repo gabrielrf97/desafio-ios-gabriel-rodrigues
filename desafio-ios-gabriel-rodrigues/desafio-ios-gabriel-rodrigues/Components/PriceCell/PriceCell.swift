@@ -14,5 +14,6 @@ class PriceCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.isUserInteractionEnabled = false
     }
 }

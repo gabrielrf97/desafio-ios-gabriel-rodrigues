@@ -8,6 +8,7 @@
 
 import UIKit
 import Hero
+import AlamofireImage
 
 class SingleCharacterViewController: UIViewController {
 
@@ -19,13 +20,15 @@ class SingleCharacterViewController: UIViewController {
     let comicIdentifier = "ComicCell"
     
     var character: Character! //Not a good pattern in MVVM, but creating a struct would be model duplication
+    var comics : [Comic]?
     let viewModel = SingleCharacterViewModel()
-    var comics = [Comic]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
         self.hero.isEnabled = true
+        viewModel.delegate = self
+        viewModel.fetch(character.comics!)
     }
     
     @IBAction func backTapped(_ sender: Any) {
@@ -38,7 +41,7 @@ class SingleCharacterViewController: UIViewController {
             return
         }
         characterImageView.hero.id = _character.name
-//        characterImageView!.sd_setImage(with: URL(string: _character.pictureUrl!), completed: nil)
+        characterImageView!.af_setImage(withURL: URL(string: _character.pictureUrl!)!)
         characterName.text = _character.name
         characterDescription.text = _character.description
     }
@@ -46,14 +49,14 @@ class SingleCharacterViewController: UIViewController {
 
 extension SingleCharacterViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 8
+        return comics?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: comicIdentifier, for: indexPath) as? ComicCell else {
             return UICollectionViewCell()
         }
-//        cell.configure(with: Com)
+        cell.configure(with: comics![indexPath.row])
         cell.comicImage.hero.id = "\(indexPath.row)"
         return cell
     }
@@ -64,8 +67,20 @@ extension SingleCharacterViewController: UICollectionViewDelegate, UICollectionV
         }
         comicVC.hero.isEnabled = true
         comicVC.hero.modalAnimationType = .autoReverse(presenting: .zoom)
+        comicVC.modalPresentationStyle = .fullScreen
         comicVC.heroId = "\(indexPath.row)"
-//        comicVC.modalPresentationStyle = .fullScreen
+        comicVC.comic = comics![indexPath.row]
         self.present(comicVC, animated: true, completion: nil)
+    }
+}
+
+extension SingleCharacterViewController: SigleCharacterViewDelegate {
+    func updateView() {
+        self.comics = viewModel.comics
+        self.comicsCollectionView.reloadData()
+    }
+    
+    func show(error: String) {
+        self.presentMessage(with: "Ops", body: error, option: "Cancelar")
     }
 }

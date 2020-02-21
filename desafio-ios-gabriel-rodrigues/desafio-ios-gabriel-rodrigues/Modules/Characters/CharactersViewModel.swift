@@ -14,15 +14,23 @@ struct CharacterInfo {
     let id: Int
 }
 
-protocol CharactersViewProtocol: class {
-    func updateView(with charactersInfo: [CharacterInfo])
+protocol UpdateViewProtocol: class {
     func show(error: String)
+}
+
+extension UpdateViewProtocol {
+    func updateView(with charactersInfo: [CharacterInfo]) {}
+}
+
+protocol ViewProtocol: class {
+     func show(error: String)
+     func updateView(with charactersInfo: [CharacterInfo])
 }
 
 class CharactersViewModel {
     
     let server: ClientServer
-    weak var delegate: CharactersViewProtocol?
+    weak var delegate: ViewProtocol?
     var characters = [Character]()
     var charactersInfo = [CharacterInfo]()
     
